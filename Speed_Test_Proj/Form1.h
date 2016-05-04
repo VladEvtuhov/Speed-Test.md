@@ -6,6 +6,7 @@
 #include <conio.h>
 #include <Windows.h>
 #include <time.h>
+#include "Result.h"
 
 namespace SpeedTest {
 
@@ -53,7 +54,7 @@ namespace SpeedTest {
 	private: System::Windows::Forms::Button^  button1;
 	public: System::Windows::Forms::TextBox^  textBox3;
 
-	public: String^ str; String^ str1; char chr; int i; int j; String^ keyf; clock_t time; int o; int sr_znach;
+	public: String^ str; String^ str1; char chr; int i; int j; String^ keyf; clock_t time; int o; int sr_znach; int fails; double r;
 
 	private: System::Windows::Forms::PictureBox^  pictureBox5;
 	private: System::Windows::Forms::PictureBox^  pictureBox6;
@@ -93,6 +94,12 @@ namespace SpeedTest {
 	private: System::Windows::Forms::PictureBox^  pictureBox37;
 	private: System::Windows::Forms::PictureBox^  pictureBox38;
 	private: System::Windows::Forms::TextBox^  textBox1;
+	public: System::Windows::Forms::TextBox^  textBox2;
+	private: 
+	public: System::Windows::Forms::TextBox^  textBox4;
+	public: System::Windows::Forms::TextBox^  textBox5;
+	private: System::Windows::Forms::Timer^  timer2;
+	public: 
 
 	private: 
 
@@ -305,6 +312,205 @@ namespace SpeedTest {
 						str1="/";
 						chr='/';
 				}
+
+				if (ch=='R')
+				{
+						pictureBox1->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="R";
+						chr='R';
+				}
+				if (ch=='T')
+				{
+						pictureBox2->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="T";
+						chr='T';
+				}
+				if (ch=='E')
+				{
+						pictureBox9->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="E";
+						chr='E';
+				}
+				if (ch=='W')
+				{
+						pictureBox10->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="W";
+						chr='W';
+				}
+				if (ch=='Q')
+				{
+						pictureBox11->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="Q";
+						chr='Q';
+				}
+				if (ch=='A')
+				{
+						pictureBox12->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="A";
+						chr='A';
+				}
+				if (ch=='S')
+				{
+						pictureBox13->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="S";
+						chr='S';
+				}
+				if (ch=='Y')
+				{
+						pictureBox4->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="Y";
+						chr='Y';
+				}
+				if (ch=='U')
+				{
+						pictureBox14->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="U";
+						chr='U';
+				}
+				if (ch=='I')
+				{
+						pictureBox15->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="I";
+						chr='I';
+				}
+				if (ch=='O')
+				{
+						pictureBox16->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="O";
+						chr='O';
+				}
+				if (ch=='P')
+				{
+						pictureBox17->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="P";
+						chr='P';
+				}
+				if (ch=='{')
+				{
+						pictureBox18->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="{";
+						chr='{';
+				}
+				if (ch=='}')
+				{
+						pictureBox19->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="}";
+						chr='}';
+				}
+				if (ch=='D')
+				{
+						pictureBox20->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="D";
+						chr='D';
+				}
+				if (ch=='F')
+				{
+						pictureBox21->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="F";
+						chr='F';
+				}
+				if (ch=='G')
+				{
+						pictureBox22->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="G";
+						chr='G';
+				}
+				if (ch=='H')
+				{
+						pictureBox23->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="H";
+						chr='H';
+				}
+				if (ch=='J')
+				{
+						pictureBox24->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="J";
+						chr='J';
+				}
+				if (ch=='K')
+				{
+						pictureBox25->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="K";
+						chr='K';
+				}
+				if (ch=='L')
+				{
+						pictureBox26->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="L";
+						chr='L';
+				}
+				if (ch==':')
+				{
+						pictureBox27->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1=":";
+						chr=':';
+				}
+				if (ch=='\"')
+				{
+						pictureBox28->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="\"";
+						chr='\"';
+				}
+				if (ch=='Z')
+				{
+						pictureBox29->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="Z";
+						chr='Z';
+				}
+				if (ch=='X')
+				{
+						pictureBox30->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="X";
+						chr='X';
+				}
+				if (ch=='C')
+				{
+						pictureBox31->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="C";
+						chr='C';
+				}
+				if (ch=='V')
+				{
+						pictureBox32->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="V";
+						chr='V';
+				}
+				if (ch=='B')
+				{
+						pictureBox33->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="B";
+						chr='B';
+				}
+				if (ch=='N')
+				{
+						pictureBox34->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="N";
+						chr='N';
+				}
+				if (ch=='M')
+				{
+						pictureBox35->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="M";
+						chr='M';
+				}
+				if (ch=='<')
+				{
+						pictureBox36->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="<";
+						chr='<';
+				}
+				if (ch=='>')
+				{
+						pictureBox37->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1=">";
+						chr='>';
+				}
+				if (ch=='?')
+				{
+						pictureBox38->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						str1="?";
+						chr='?';
+				}
 			}
 	public: void Keyfind(wchar_t k)
 			{
@@ -314,16 +520,16 @@ namespace SpeedTest {
 				}
 				else 
 				{
-					MessageBox::Show("Произошла ошибка при вводе","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+					MessageBox::Show("Произошла ошибка при вводе(Возможно Вкл/Выкл CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				}
 			}
 	public: void Keyq(wchar_t ch)
 			{
-				if (ch=='r')
+				if ((ch=='r') || (ch=='R'))
 				{
 						pictureBox1->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='t')
+				if ((ch=='t') || (ch=='T'))
 				{
 						pictureBox2->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
@@ -331,127 +537,127 @@ namespace SpeedTest {
 				{
 						pictureBox3->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='e')
+				if ((ch=='e') || (ch=='E'))
 				{
 						pictureBox9->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='w')
+				if ((ch=='w') || (ch=='W'))
 				{
 						pictureBox10->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='q')
+				if ((ch=='q') || (ch=='Q'))
 				{
 						pictureBox11->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='a')
+				if ((ch=='a') || (ch=='A'))
 				{
 						pictureBox12->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='s')
+				if ((ch=='s') || (ch=='S'))
 				{
 						pictureBox13->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='y')
+				if ((ch=='y') || (ch=='Y'))
 				{
 						pictureBox4->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='u')
+				if ((ch=='u') || (ch=='U'))
 				{
 						pictureBox14->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='i')
+				if ((ch=='i') || (ch=='I'))
 				{
 						pictureBox15->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='o')
+				if ((ch=='o') || (ch=='O'))
 				{
 						pictureBox16->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='p')
+				if ((ch=='p') || (ch=='P'))
 				{
 						pictureBox17->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='[')
+				if ((ch=='[') || (ch=='{'))
 				{
 						pictureBox18->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch==']')
+				if ((ch==']') || (ch=='}'))
 				{
 						pictureBox19->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='d')
+				if ((ch=='d') || (ch=='D'))
 				{
 						pictureBox20->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='f')
+				if ((ch=='f') || (ch=='F'))
 				{
 						pictureBox21->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='g')
+				if ((ch=='g') || (ch=='G'))
 				{
 						pictureBox22->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='h')
+				if ((ch=='h') || (ch=='H'))
 				{
 						pictureBox23->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='j')
+				if ((ch=='j') || (ch=='J'))
 				{
 						pictureBox24->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='k')
+				if ((ch=='k') || (ch=='K'))
 				{
 						pictureBox25->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='l')
+				if ((ch=='l') || (ch=='L'))
 				{
 						pictureBox26->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch==';')
+				if ((ch==';') || (ch==':'))
 				{
 						pictureBox27->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='\'')
+				if ((ch=='\'') || (ch=='\"'))
 				{
 						pictureBox28->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='z')
+				if ((ch=='z') || (ch=='Z'))
 				{
 						pictureBox29->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='x')
+				if ((ch=='x') || (ch=='X'))
 				{
 						pictureBox30->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='c')
+				if ((ch=='c') || (ch=='C'))
 				{
 						pictureBox31->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='v')
+				if ((ch=='v') || (ch=='V'))
 				{
 						pictureBox32->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='b')
+				if ((ch=='b') || (ch=='B'))
 				{
 						pictureBox33->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='n')
+				if ((ch=='n') || (ch=='N'))
 				{
 						pictureBox34->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='m')
+				if ((ch=='m') || (ch=='M'))
 				{
 						pictureBox35->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch==',')
+				if ((ch==',') || (ch=='<'))
 				{
 						pictureBox36->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='.')
+				if ((ch=='.') || (ch=='>'))
 				{
 						pictureBox37->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
-				if (ch=='/')
+				if ((ch=='/') || (ch=='?'))
 				{
 						pictureBox38->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
@@ -461,39 +667,39 @@ namespace SpeedTest {
 	public: void controlkey(wchar_t a)
 			{
 				if (a==' ') keyf = "space";
-				if (a=='r') keyf = "r";
-				if (a=='t') keyf = "t";
-				if (a=='e') keyf = "e";
-				if (a=='w') keyf = "w";
-				if (a=='q') keyf = "q";
-				if (a=='a') keyf = "a";
-				if (a=='s') keyf = "s";
-				if (a=='y') keyf = "y";
-				if (a=='u') keyf = "u";
-				if (a=='i') keyf = "i";
-				if (a=='o') keyf = "o";
-				if (a=='p') keyf = "p";
-				if (a=='[') keyf = "[";
-				if (a==']') keyf = "]";
-				if (a=='d') keyf = "d";
-				if (a=='f') keyf = "f";
-				if (a=='g') keyf = "g";
-				if (a=='h') keyf = "h";
-				if (a=='j') keyf = "j";
-				if (a=='k') keyf = "k";
-				if (a=='l') keyf = "l";
-				if (a==';') keyf = ";";
-				if (a=='\'') keyf = "'";
-				if (a=='z') keyf = "z";
-				if (a=='x') keyf = "x";
-				if (a=='c') keyf = "c";
-				if (a=='v') keyf = "v";
-				if (a=='b') keyf = "b";
-				if (a=='n') keyf = "n";
-				if (a=='m') keyf = "m";
-				if (a==',') keyf = ",";
-				if (a=='.') keyf = ".";
-				if (a=='/') keyf = "/";
+				if ((a=='r') || (a=='R')) keyf = "r";
+				if ((a=='t') || (a=='T')) keyf = "t";
+				if ((a=='e') || (a=='E')) keyf = "e";
+				if ((a=='w') || (a=='W')) keyf = "w";
+				if ((a=='q') || (a=='Q')) keyf = "q";
+				if ((a=='a') || (a=='A')) keyf = "a";
+				if ((a=='s') || (a=='S')) keyf = "s";
+				if ((a=='y') || (a=='Y')) keyf = "y";
+				if ((a=='u') || (a=='U')) keyf = "u";
+				if ((a=='i') || (a=='I')) keyf = "i";
+				if ((a=='o') || (a=='O')) keyf = "o";
+				if ((a=='p') || (a=='P')) keyf = "p";
+				if ((a=='[') || (a=='{')) keyf = "[";
+				if ((a==']') || (a=='}')) keyf = "]";
+				if ((a=='d') || (a=='D')) keyf = "d";
+				if ((a=='f') || (a=='F')) keyf = "f";
+				if ((a=='g') || (a=='G')) keyf = "g";
+				if ((a=='h') || (a=='H')) keyf = "h";
+				if ((a=='j') || (a=='J')) keyf = "j";
+				if ((a=='k') || (a=='K')) keyf = "k";
+				if ((a=='l') || (a=='L')) keyf = "l";
+				if ((a==';') || (a==':')) keyf = ";";
+				if ((a=='\'') || (a=='\"')) keyf = "'";
+				if ((a=='z') || (a=='Z')) keyf = "z";
+				if ((a=='x') || (a=='X')) keyf = "x";
+				if ((a=='c') || (a=='C')) keyf = "c";
+				if ((a=='v') || (a=='V')) keyf = "v";
+				if ((a=='b') || (a=='B')) keyf = "b";
+				if ((a=='n') || (a=='N')) keyf = "n";
+				if ((a=='m') || (a=='M')) keyf = "m";
+				if ((a==',') || (a=='<')) keyf = ",";
+				if ((a=='.') || (a=='>')) keyf = ".";
+				if ((a=='/') || (a=='?')) keyf = ",,";
 			}
 	public: void nextkey()
 			{
@@ -583,6 +789,10 @@ public:
 			this->pictureBox37 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox38 = (gcnew System::Windows::Forms::PictureBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
@@ -625,7 +835,7 @@ public:
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Default;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(190, 150);
 			this->pictureBox1->Name = L"pictureBox1";
@@ -651,7 +861,7 @@ public:
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(51, 29);
 			this->button1->TabIndex = 7;
-			this->button1->Text = L"Выход";
+			this->button1->Text = L"Exit";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
@@ -1047,11 +1257,43 @@ public:
 			this->textBox1->TabIndex = 1;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Form1::textBox1_TextChanged);
 			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(10, 7);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(23, 20);
+			this->textBox2->TabIndex = 48;
+			this->textBox2->Visible = false;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(39, 7);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(23, 20);
+			this->textBox4->TabIndex = 49;
+			this->textBox4->Visible = false;
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(70, 7);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(23, 20);
+			this->textBox5->TabIndex = 50;
+			this->textBox5->Visible = false;
+			// 
+			// timer2
+			// 
+			this->timer2->Interval = 25;
+			this->timer2->Tick += gcnew System::EventHandler(this, &Form1::timer2_Tick);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(619, 347);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->textBox4);
+			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->pictureBox38);
 			this->Controls->Add(this->pictureBox37);
@@ -1099,6 +1341,8 @@ public:
 			this->MinimizeBox = false;
 			this->MinimumSize = System::Drawing::Size(635, 385);
 			this->Name = L"Form1";
+			this->Opacity = 0;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Keyboard";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
@@ -1148,6 +1392,7 @@ public:
 			 {
 				 i=0;
 				 j=0;
+				 fails = 0;
 				 o = 0;
 				 sr_znach = 0;
 				 str="";
@@ -1160,6 +1405,7 @@ public:
 				 nextkey();
 				 Keyw(str[0]);
 				 timer1->Start();
+				 timer2->Start();
 				 time = clock();
 				 }
 
@@ -1176,13 +1422,50 @@ private: System::Void textBox1_TextChanged(System::Object^  sender, System::Even
 			 }
 			 if ((textBox1->Text!="") && (textBox1->Text!=str1))
 			 {
-				 MessageBox::Show("Произошла ошибка при вводе","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 MessageBox::Show("Entering error has occured(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 fails++;
+				 if (fails==3) 
+				 {
+					 StreamWriter^ sw = gcnew StreamWriter("Result.txt",true);
+					 sw->WriteLine("Name:"+textBox2->Text);
+					 sw->WriteLine("Second Name:"+textBox4->Text);
+					 sw->WriteLine("Level:"+textBox5->Text);
+					 sw->WriteLine("Result: FAILS");
+					 sw->WriteLine("#########################################################");
+					 sw->Close();
+					 Result ^ res = gcnew Result();
+					 res->Show();
+					 res->textBox1->Text = this->textBox2->Text;
+					 res->textBox2->Text = this->textBox4->Text;
+					 res->textBox3->Text = this->textBox5->Text;
+					 res->label7->Text = "FAILS";
+					 this->Hide();
+				 }
 			 }
 
 			 if ((str[i]!='0') && (textBox1->Text!="")) { Keyw(str[i]); }
 			 else 
 			 {
-				 if ((textBox1->Text!="") && (str1!="end")) {str1="end"; time = clock() - time;  MessageBox::Show("Тест окончен, время выполнения заняло "+ ((double)time/CLOCKS_PER_SEC)+ " сек.","Cреднее количество нажатий в секунду = "+ sr_znach/((double)time/CLOCKS_PER_SEC), MessageBoxButtons::OK,MessageBoxIcon::Asterisk);}
+				 if ((textBox1->Text!="") && (str1!="end")) {str1="end"; time = clock() - time;
+				 StreamWriter^ sw = gcnew StreamWriter("Result.txt",true);
+				 sw->WriteLine("Name:"+textBox4->Text);
+				 sw->WriteLine("Second Name:"+textBox2->Text);
+				 sw->WriteLine("Level:"+textBox5->Text);
+				 sw->WriteLine("Result:");
+				 sw->WriteLine("Lead time taken: "+((double)time/CLOCKS_PER_SEC)+" sec.");
+				 sw->WriteLine("The average number of clicks per second =  "+sr_znach/((float)time/CLOCKS_PER_SEC));
+				 sw->WriteLine("#########################################################");
+				 sw->Close();
+				 Result ^ res = gcnew Result();
+				 res->Show();
+				 res->textBox1->Text = this->textBox2->Text;
+				 res->textBox2->Text = this->textBox4->Text;
+				 res->textBox3->Text = this->textBox5->Text;
+				 res->label5->Text = "Lead time taken "+((double)time/CLOCKS_PER_SEC)+ " sec.";
+				 res->label6->Text = "The average number of clicks per second = "+ sr_znach/((float)time/CLOCKS_PER_SEC);
+				 this->Hide();
+				 //MessageBox::Show("Тест окончен, время выполнения заняло "+ ((double)time/CLOCKS_PER_SEC)+ " сек.","Cреднее количество нажатий в секунду = "+ sr_znach/((double)time/CLOCKS_PER_SEC), MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 }
 			 }
 			 textBox1->Text="";
 		 }
@@ -1205,6 +1488,14 @@ private: System::Void timer1_Tick_1(System::Object^  sender, System::EventArgs^ 
 			 timer1->Start();
 		 }
 
+private: System::Void timer2_Tick(System::Object^  sender, System::EventArgs^  e) 
+		 {
+			 timer2->Stop();
+			 r = r + 0.05;
+			 this->Opacity=r;
+			 timer2->Start();
+			 if (r==1) timer2->Stop();
+		 }
 };
 }
 
