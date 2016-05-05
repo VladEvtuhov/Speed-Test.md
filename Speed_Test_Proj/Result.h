@@ -202,7 +202,6 @@ namespace SpeedTest {
 			this->button2->TabIndex = 15;
 			this->button2->Text = L"Back to menu";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Visible = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Result::button2_Click);
 			// 
 			// timer1
@@ -241,23 +240,12 @@ namespace SpeedTest {
 
 		}
 #pragma endregion
-	private: System::Void Result_Load(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 timer1->Start();
-			 }
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {exit(0);
-		 }
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) 
-		 {
-			 
-		 }
-private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e)
-		 {
-			 timer1->Stop();
-			 r = r + 0.05;
-			 this->Opacity=r;
-			 timer1->Start();
-			 if (r==1) timer1->Stop();
-		 }
+private: System::Void Result_Load(System::Object^  sender, System::EventArgs^  e);
+
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e);
+
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e); 
+
+private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e);
 };
 }

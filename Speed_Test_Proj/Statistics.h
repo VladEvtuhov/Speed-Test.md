@@ -34,13 +34,30 @@ namespace SpeedTest {
 				delete components;
 			}
 		}
-	public: System::Windows::Forms::TextBox^  textBox1;
+
 	protected: 
 
 	protected: 
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Timer^  timer1;
 	private: System::ComponentModel::IContainer^  components;
+	public: System::Windows::Forms::DataGridView^  dataGridView1;
+	private: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public: double r;
 
 	private:
@@ -57,24 +74,15 @@ namespace SpeedTest {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(12, 12);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->textBox1->Size = System::Drawing::Size(434, 290);
-			this->textBox1->TabIndex = 0;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(187, 313);
+			this->button1->Location = System::Drawing::Point(240, 313);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 1;
@@ -87,24 +95,33 @@ namespace SpeedTest {
 			this->timer1->Interval = 25;
 			this->timer1->Tick += gcnew System::EventHandler(this, &Statistics::timer1_Tick);
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(2, 12);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->ReadOnly = true;
+			this->dataGridView1->Size = System::Drawing::Size(554, 295);
+			this->dataGridView1->TabIndex = 2;
+			// 
 			// Statistics
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(459, 347);
+			this->ClientSize = System::Drawing::Size(559, 347);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBox1);
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(475, 385);
+			this->MaximumSize = System::Drawing::Size(575, 385);
 			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(475, 385);
+			this->MinimumSize = System::Drawing::Size(575, 385);
 			this->Name = L"Statistics";
 			this->Opacity = 0;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Statistics";
 			this->Load += gcnew System::EventHandler(this, &Statistics::Statistics_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
