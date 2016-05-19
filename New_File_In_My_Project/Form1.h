@@ -55,8 +55,8 @@ namespace SpeedTest {
 	private: System::Windows::Forms::Button^  button1;
 	public: System::Windows::Forms::TextBox^  textBox3;
 
-	public: String^ str; String^ str1; char chr; int i; int j; String^ keyf; clock_t time; int o; int sr_znach; int fails; double opacit;
-
+	public: String^ str; String^ str1; char chr; int i; int j; String^ keyf; clock_t time; int o; int sr_znach; int fails; double opacit; int kol; int line; int head; int backerror; int error;
+	private: System::Windows::Forms::PictureBox^  pictureBox39;
 	private: System::Windows::Forms::PictureBox^  pictureBox5;
 	private: System::Windows::Forms::PictureBox^  pictureBox6;
 	private: System::Windows::Forms::PictureBox^  pictureBox7;
@@ -100,6 +100,12 @@ namespace SpeedTest {
 	public: System::Windows::Forms::TextBox^  textBox4;
 	public: System::Windows::Forms::TextBox^  textBox5;
 	private: System::Windows::Forms::Timer^  timer2;
+	private: System::Windows::Forms::TextBox^  textBox6;
+	private: System::Windows::Forms::Label^  label2;
+
+	private: System::Windows::Forms::Timer^  timer3;
+
+	private: 
 	public: 
 
 	private: 
@@ -133,6 +139,7 @@ public:
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
+			this->pictureBox39 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -180,6 +187,10 @@ public:
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox39))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
@@ -220,8 +231,18 @@ public:
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox38))->BeginInit();
 			this->SuspendLayout();
 			// 
+			// pictureBox39
+			// 
+			this->pictureBox39->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox39->Location = System::Drawing::Point(0, 0);
+			this->pictureBox39->Name = L"pictureBox39";
+			this->pictureBox39->Size = System::Drawing::Size(625, 355);
+			this->pictureBox39->TabIndex = 52;
+			this->pictureBox39->TabStop = false;
+			// 
 			// pictureBox1
 			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Default;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(190, 150);
@@ -233,6 +254,7 @@ public:
 			// 
 			// pictureBox2
 			// 
+			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.Image")));
 			this->pictureBox2->Location = System::Drawing::Point(230, 150);
 			this->pictureBox2->Name = L"pictureBox2";
@@ -244,17 +266,19 @@ public:
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::AntiqueWhite;
 			this->button1->Location = System::Drawing::Point(521, 307);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(87, 28);
 			this->button1->TabIndex = 7;
 			this->button1->Text = L"Back To Menu";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
 			// textBox3
 			// 
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->textBox3->BackColor = System::Drawing::Color::Khaki;
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Lucida Console", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(204)));
 			this->textBox3->Location = System::Drawing::Point(12, 53);
 			this->textBox3->Multiline = true;
@@ -262,12 +286,10 @@ public:
 			this->textBox3->ReadOnly = true;
 			this->textBox3->Size = System::Drawing::Size(596, 93);
 			this->textBox3->TabIndex = 8;
-			this->textBox3->AcceptsTabChanged += gcnew System::EventHandler(this, &Form1::textBox3_AcceptsTabChanged);
-			this->textBox3->DragEnter += gcnew System::Windows::Forms::DragEventHandler(this, &Form1::textBox3_DragEnter);
-			this->textBox3->ChangeUICues += gcnew System::Windows::Forms::UICuesEventHandler(this, &Form1::textBox3_ChangeUICues);
 			// 
 			// pictureBox3
 			// 
+			this->pictureBox3->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->Location = System::Drawing::Point(180, 270);
 			this->pictureBox3->Name = L"pictureBox3";
@@ -278,6 +300,7 @@ public:
 			// 
 			// pictureBox5
 			// 
+			this->pictureBox5->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox5->Location = System::Drawing::Point(281, 7);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(40, 40);
@@ -287,6 +310,7 @@ public:
 			// 
 			// pictureBox6
 			// 
+			this->pictureBox6->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox6->Location = System::Drawing::Point(327, 12);
 			this->pictureBox6->Name = L"pictureBox6";
 			this->pictureBox6->Size = System::Drawing::Size(30, 30);
@@ -296,6 +320,7 @@ public:
 			// 
 			// pictureBox7
 			// 
+			this->pictureBox7->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox7->Location = System::Drawing::Point(363, 12);
 			this->pictureBox7->Name = L"pictureBox7";
 			this->pictureBox7->Size = System::Drawing::Size(30, 30);
@@ -305,6 +330,7 @@ public:
 			// 
 			// pictureBox8
 			// 
+			this->pictureBox8->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox8->Location = System::Drawing::Point(399, 12);
 			this->pictureBox8->Name = L"pictureBox8";
 			this->pictureBox8->Size = System::Drawing::Size(30, 30);
@@ -320,6 +346,7 @@ public:
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(56, 20);
@@ -329,6 +356,7 @@ public:
 			// 
 			// pictureBox9
 			// 
+			this->pictureBox9->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox9.Image")));
 			this->pictureBox9->Location = System::Drawing::Point(150, 150);
 			this->pictureBox9->Name = L"pictureBox9";
@@ -339,6 +367,7 @@ public:
 			// 
 			// pictureBox10
 			// 
+			this->pictureBox10->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox10->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox10.Image")));
 			this->pictureBox10->Location = System::Drawing::Point(110, 150);
 			this->pictureBox10->Name = L"pictureBox10";
@@ -349,6 +378,7 @@ public:
 			// 
 			// pictureBox11
 			// 
+			this->pictureBox11->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox11->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox11.Image")));
 			this->pictureBox11->Location = System::Drawing::Point(70, 150);
 			this->pictureBox11->Name = L"pictureBox11";
@@ -359,6 +389,7 @@ public:
 			// 
 			// pictureBox12
 			// 
+			this->pictureBox12->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox12->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox12.Image")));
 			this->pictureBox12->Location = System::Drawing::Point(85, 190);
 			this->pictureBox12->Name = L"pictureBox12";
@@ -369,6 +400,7 @@ public:
 			// 
 			// pictureBox13
 			// 
+			this->pictureBox13->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox13->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox13.Image")));
 			this->pictureBox13->Location = System::Drawing::Point(125, 190);
 			this->pictureBox13->Name = L"pictureBox13";
@@ -379,6 +411,7 @@ public:
 			// 
 			// pictureBox4
 			// 
+			this->pictureBox4->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox4.Image")));
 			this->pictureBox4->Location = System::Drawing::Point(270, 150);
 			this->pictureBox4->Name = L"pictureBox4";
@@ -389,6 +422,7 @@ public:
 			// 
 			// pictureBox14
 			// 
+			this->pictureBox14->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox14->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox14.Image")));
 			this->pictureBox14->Location = System::Drawing::Point(310, 150);
 			this->pictureBox14->Name = L"pictureBox14";
@@ -399,6 +433,7 @@ public:
 			// 
 			// pictureBox15
 			// 
+			this->pictureBox15->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox15->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox15.Image")));
 			this->pictureBox15->Location = System::Drawing::Point(350, 150);
 			this->pictureBox15->Name = L"pictureBox15";
@@ -409,6 +444,7 @@ public:
 			// 
 			// pictureBox16
 			// 
+			this->pictureBox16->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox16->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox16.Image")));
 			this->pictureBox16->Location = System::Drawing::Point(390, 150);
 			this->pictureBox16->Name = L"pictureBox16";
@@ -419,6 +455,7 @@ public:
 			// 
 			// pictureBox17
 			// 
+			this->pictureBox17->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox17->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox17.Image")));
 			this->pictureBox17->Location = System::Drawing::Point(430, 150);
 			this->pictureBox17->Name = L"pictureBox17";
@@ -429,6 +466,7 @@ public:
 			// 
 			// pictureBox18
 			// 
+			this->pictureBox18->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox18->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox18.Image")));
 			this->pictureBox18->Location = System::Drawing::Point(470, 150);
 			this->pictureBox18->Name = L"pictureBox18";
@@ -439,6 +477,7 @@ public:
 			// 
 			// pictureBox19
 			// 
+			this->pictureBox19->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox19->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox19.Image")));
 			this->pictureBox19->Location = System::Drawing::Point(510, 150);
 			this->pictureBox19->Name = L"pictureBox19";
@@ -449,6 +488,7 @@ public:
 			// 
 			// pictureBox20
 			// 
+			this->pictureBox20->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox20->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox20.Image")));
 			this->pictureBox20->Location = System::Drawing::Point(165, 190);
 			this->pictureBox20->Name = L"pictureBox20";
@@ -459,6 +499,7 @@ public:
 			// 
 			// pictureBox21
 			// 
+			this->pictureBox21->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox21->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox21.Image")));
 			this->pictureBox21->Location = System::Drawing::Point(205, 190);
 			this->pictureBox21->Name = L"pictureBox21";
@@ -469,6 +510,7 @@ public:
 			// 
 			// pictureBox22
 			// 
+			this->pictureBox22->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox22->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox22.Image")));
 			this->pictureBox22->Location = System::Drawing::Point(245, 190);
 			this->pictureBox22->Name = L"pictureBox22";
@@ -479,6 +521,7 @@ public:
 			// 
 			// pictureBox23
 			// 
+			this->pictureBox23->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox23->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox23.Image")));
 			this->pictureBox23->Location = System::Drawing::Point(285, 190);
 			this->pictureBox23->Name = L"pictureBox23";
@@ -489,6 +532,7 @@ public:
 			// 
 			// pictureBox24
 			// 
+			this->pictureBox24->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox24->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox24.Image")));
 			this->pictureBox24->Location = System::Drawing::Point(325, 190);
 			this->pictureBox24->Name = L"pictureBox24";
@@ -499,6 +543,7 @@ public:
 			// 
 			// pictureBox25
 			// 
+			this->pictureBox25->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox25->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox25.Image")));
 			this->pictureBox25->Location = System::Drawing::Point(365, 190);
 			this->pictureBox25->Name = L"pictureBox25";
@@ -509,6 +554,7 @@ public:
 			// 
 			// pictureBox26
 			// 
+			this->pictureBox26->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox26->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox26.Image")));
 			this->pictureBox26->Location = System::Drawing::Point(405, 190);
 			this->pictureBox26->Name = L"pictureBox26";
@@ -519,6 +565,7 @@ public:
 			// 
 			// pictureBox27
 			// 
+			this->pictureBox27->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox27->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox27.Image")));
 			this->pictureBox27->Location = System::Drawing::Point(445, 190);
 			this->pictureBox27->Name = L"pictureBox27";
@@ -529,6 +576,7 @@ public:
 			// 
 			// pictureBox28
 			// 
+			this->pictureBox28->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox28->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox28.Image")));
 			this->pictureBox28->Location = System::Drawing::Point(485, 190);
 			this->pictureBox28->Name = L"pictureBox28";
@@ -539,6 +587,7 @@ public:
 			// 
 			// pictureBox29
 			// 
+			this->pictureBox29->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox29->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox29.Image")));
 			this->pictureBox29->Location = System::Drawing::Point(100, 230);
 			this->pictureBox29->Name = L"pictureBox29";
@@ -549,6 +598,7 @@ public:
 			// 
 			// pictureBox30
 			// 
+			this->pictureBox30->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox30->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox30.Image")));
 			this->pictureBox30->Location = System::Drawing::Point(140, 230);
 			this->pictureBox30->Name = L"pictureBox30";
@@ -559,6 +609,7 @@ public:
 			// 
 			// pictureBox31
 			// 
+			this->pictureBox31->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox31->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox31.Image")));
 			this->pictureBox31->Location = System::Drawing::Point(180, 230);
 			this->pictureBox31->Name = L"pictureBox31";
@@ -569,6 +620,7 @@ public:
 			// 
 			// pictureBox32
 			// 
+			this->pictureBox32->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox32->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox32.Image")));
 			this->pictureBox32->Location = System::Drawing::Point(220, 230);
 			this->pictureBox32->Name = L"pictureBox32";
@@ -579,6 +631,7 @@ public:
 			// 
 			// pictureBox33
 			// 
+			this->pictureBox33->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox33->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox33.Image")));
 			this->pictureBox33->Location = System::Drawing::Point(260, 230);
 			this->pictureBox33->Name = L"pictureBox33";
@@ -589,6 +642,7 @@ public:
 			// 
 			// pictureBox34
 			// 
+			this->pictureBox34->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox34->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox34.Image")));
 			this->pictureBox34->Location = System::Drawing::Point(300, 230);
 			this->pictureBox34->Name = L"pictureBox34";
@@ -599,6 +653,7 @@ public:
 			// 
 			// pictureBox35
 			// 
+			this->pictureBox35->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox35->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox35.Image")));
 			this->pictureBox35->Location = System::Drawing::Point(340, 230);
 			this->pictureBox35->Name = L"pictureBox35";
@@ -609,6 +664,7 @@ public:
 			// 
 			// pictureBox36
 			// 
+			this->pictureBox36->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox36->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox36.Image")));
 			this->pictureBox36->Location = System::Drawing::Point(380, 230);
 			this->pictureBox36->Name = L"pictureBox36";
@@ -619,6 +675,7 @@ public:
 			// 
 			// pictureBox37
 			// 
+			this->pictureBox37->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox37->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox37.Image")));
 			this->pictureBox37->Location = System::Drawing::Point(420, 230);
 			this->pictureBox37->Name = L"pictureBox37";
@@ -629,6 +686,7 @@ public:
 			// 
 			// pictureBox38
 			// 
+			this->pictureBox38->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox38->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox38.Image")));
 			this->pictureBox38->Location = System::Drawing::Point(460, 230);
 			this->pictureBox38->Name = L"pictureBox38";
@@ -677,11 +735,41 @@ public:
 			this->timer2->Interval = 25;
 			this->timer2->Tick += gcnew System::EventHandler(this, &Form1::timer2_Tick);
 			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(10, 307);
+			this->textBox6->Multiline = true;
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(65, 34);
+			this->textBox6->TabIndex = 51;
+			this->textBox6->Visible = false;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(457, 20);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(119, 18);
+			this->label2->TabIndex = 53;
+			this->label2->Text = L"Mistakes 0/3";
+			// 
+			// timer3
+			// 
+			this->timer3->Interval = 50;
+			this->timer3->Tick += gcnew System::EventHandler(this, &Form1::timer3_Tick);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(619, 347);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox2);
@@ -727,6 +815,7 @@ public:
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->pictureBox39);
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(635, 385);
 			this->MinimizeBox = false;
@@ -736,6 +825,7 @@ public:
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Keyboard";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox39))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
@@ -791,14 +881,10 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void timer1_Tick_1(System::Object^  sender, System::EventArgs^  e);
 
 private: System::Void timer2_Tick(System::Object^  sender, System::EventArgs^  e);
-private: System::Void textBox3_AcceptsTabChanged(System::Object^  sender, System::EventArgs^  e) {textBox1->Focus();
-		 }
-private: System::Void textBox3_ChangeUICues(System::Object^  sender, System::Windows::Forms::UICuesEventArgs^  e) {textBox1->Focus();
-		 }
-private: System::Void textBox3_DragEnter(System::Object^  sender, System::Windows::Forms::DragEventArgs^  e) {textBox1->Focus();
-		 }
+
 private: System::Void textBox1_Leave(System::Object^  sender, System::EventArgs^  e) {textBox1->Focus();
 		 }
+private: System::Void timer3_Tick(System::Object^  sender, System::EventArgs^  e);
 };
 }
 

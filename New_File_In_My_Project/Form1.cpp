@@ -600,25 +600,45 @@ namespace SpeedTest{
 			}
 	void Form1::nextkey()
 			{
-				if (i<str->Length)
+				if (i<(str->Length-1))
 				{
 					 controlkey(str[i]);
 					 pictureBox5->Load("key\\_"+keyf+".png");
 				}
-				if (i+1<str->Length)
+				else 
+				{
+					delete pictureBox5->Image;
+					pictureBox5->Image = nullptr;
+				}
+				if (i+1<(str->Length-1))
 				{
 					 controlkey(str[i+1]);
 					 pictureBox6->Load("key\\_"+keyf+".png");
 				}
-				if (i+2<str->Length)
+				else 
+				{
+					delete pictureBox6->Image;
+					pictureBox6->Image = nullptr;
+				}
+				if (i+2<(str->Length-1))
 				{
 					 controlkey(str[i+2]);
 					 pictureBox7->Load("key\\_"+keyf+".png");
 				}
-				if (i+3<str->Length)
+				else 
+				{
+					delete pictureBox7->Image;
+					pictureBox7->Image = nullptr;
+				}
+				if (i+3<(str->Length-1))
 				{
 					 controlkey(str[i+3]);
 					 pictureBox8->Load("key\\_"+keyf+".png");
+				}
+				else 
+				{
+					delete pictureBox8->Image;
+					pictureBox8->Image = nullptr;
 				}
 			}
 	System::Void Form1::Form1_Load(System::Object^  sender, System::EventArgs^  e) 
@@ -627,6 +647,7 @@ namespace SpeedTest{
 				 j=0;
 				 fails = 0;
 				 o = 0;
+				 head = 0;
 				 sr_znach = 0;
 				 str="";
 				 while (j<textBox3->Lines->Length)
@@ -634,8 +655,11 @@ namespace SpeedTest{
 					str = str + textBox3->Lines[j];
 					j++;
 				 }
+				 line = textBox3->Lines[0]->Length;
 				 str = str + "0";
 				 nextkey();
+				 textBox6->Text=textBox3->Text;
+				 kol = 0;
 				 Keyw(str[0]);
 				 timer1->Start();
 				 timer2->Start();
@@ -648,14 +672,44 @@ namespace SpeedTest{
 			 {
 				 o++;
 				 sr_znach++;
+				 kol = 0;
 				 k=textBox1->Text[0];
+				 textBox3->Text="";
+				 while (kol<=i-head)
+				 {
+					 textBox3->Text=textBox3->Text+" ";
+					 kol++;
+				 }
+				 if (i==(line-1))
+				 {
+						 textBox3->Text="";
+				 }
+				 if (i<line-1)
+				 {
+					 textBox6->Text=textBox6->Text->Remove(0,1);
+					 textBox3->Text=textBox3->Text+textBox6->Text;
+				 }
+				 if (i==(line-1))
+				 {
+					 if ((str->Length-1)>i+3) textBox6->Text=textBox6->Text->Remove(0,3);
+					 textBox3->Text=textBox3->Text+textBox6->Text;
+					 head = line;
+					 line = line + textBox3->Lines[0]->Length;
+					 if (line==(str->Length-1)) head = head+1;
+				 }
 				 i++;
 				 Keyfind(k);
 			 }
 			 if ((textBox1->Text!="") && (textBox1->Text!=str1))
 			 {
-				 MessageBox::Show("Entering error has occured(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 //MessageBox::Show("Entering error has occured(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				 fails++;
+				 label2->Text="Masiatkes "+fails+"/3";
+				 backerror = 1;
+				 error = 0;
+				 timer3->Start();
+				 delete pictureBox39->Image;
+				 pictureBox39->Image = nullptr;
 				 if (fails==3) 
 				 {
 					 StreamWriter^ sw = gcnew StreamWriter("Result.txt",true);
@@ -722,4 +776,20 @@ namespace SpeedTest{
 			 timer2->Start();
 			 if (opacit==1) timer2->Stop();
 		 }
+	System::Void Form1::timer3_Tick(System::Object^  sender, System::EventArgs^  e)
+		{
+			timer3->Stop();
+			if (error > 0)
+			{
+				pictureBox39->Load("errorimg\\RED"+error+".png");
+				error--;
+			}
+			if (backerror<=5) 
+			{ 
+				pictureBox39->Load("errorimg\\RED"+backerror+".png");
+				backerror++;
+				if (backerror==5) error = 5;
+			}
+			timer3->Start();
+		}
 }
