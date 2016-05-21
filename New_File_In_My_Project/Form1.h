@@ -104,6 +104,8 @@ namespace SpeedTest {
 	private: System::Windows::Forms::Label^  label2;
 
 	private: System::Windows::Forms::Timer^  timer3;
+	private: System::Windows::Forms::PictureBox^  pictureBox40;
+
 
 	private: 
 	public: 
@@ -190,6 +192,7 @@ public:
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->pictureBox40 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox39))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
@@ -229,6 +232,7 @@ public:
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox36))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox37))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox38))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox40))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox39
@@ -266,7 +270,8 @@ public:
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::AntiqueWhite;
+			this->button1->BackColor = System::Drawing::Color::Black;
+			this->button1->ForeColor = System::Drawing::Color::White;
 			this->button1->Location = System::Drawing::Point(521, 307);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(87, 28);
@@ -277,9 +282,11 @@ public:
 			// 
 			// textBox3
 			// 
-			this->textBox3->BackColor = System::Drawing::Color::Khaki;
+			this->textBox3->BackColor = System::Drawing::Color::Black;
+			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox3->Font = (gcnew System::Drawing::Font(L"Lucida Console", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(204)));
+			this->textBox3->ForeColor = System::Drawing::Color::White;
 			this->textBox3->Location = System::Drawing::Point(12, 53);
 			this->textBox3->Multiline = true;
 			this->textBox3->Name = L"textBox3";
@@ -291,7 +298,7 @@ public:
 			// 
 			this->pictureBox3->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(180, 270);
+			this->pictureBox3->Location = System::Drawing::Point(240, 270);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(200, 40);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -300,7 +307,7 @@ public:
 			// 
 			// pictureBox5
 			// 
-			this->pictureBox5->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox5->BackColor = System::Drawing::Color::Black;
 			this->pictureBox5->Location = System::Drawing::Point(281, 7);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(40, 40);
@@ -349,6 +356,7 @@ public:
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(56, 20);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(0, 22);
@@ -750,16 +758,28 @@ public:
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::White;
 			this->label2->Location = System::Drawing::Point(457, 20);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(119, 18);
+			this->label2->Size = System::Drawing::Size(130, 18);
 			this->label2->TabIndex = 53;
-			this->label2->Text = L"Mistakes 0/3";
+			this->label2->Text = L"Mistakes 0/10";
 			// 
 			// timer3
 			// 
-			this->timer3->Interval = 50;
+			this->timer3->Interval = 10;
 			this->timer3->Tick += gcnew System::EventHandler(this, &Form1::timer3_Tick);
+			// 
+			// pictureBox40
+			// 
+			this->pictureBox40->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox40->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox40.Image")));
+			this->pictureBox40->Location = System::Drawing::Point(160, 270);
+			this->pictureBox40->Name = L"pictureBox40";
+			this->pictureBox40->Size = System::Drawing::Size(80, 40);
+			this->pictureBox40->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox40->TabIndex = 54;
+			this->pictureBox40->TabStop = false;
 			// 
 			// Form1
 			// 
@@ -768,6 +788,7 @@ public:
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(619, 347);
+			this->Controls->Add(this->pictureBox40);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
@@ -864,6 +885,7 @@ public:
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox36))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox37))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox38))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox40))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

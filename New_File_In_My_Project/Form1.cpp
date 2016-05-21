@@ -213,198 +213,231 @@ namespace SpeedTest{
 				if (ch=='R')
 				{
 						pictureBox1->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="R";
 						chr='R';
 				}
 				if (ch=='T')
 				{
 						pictureBox2->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="T";
 						chr='T';
 				}
 				if (ch=='E')
 				{
 						pictureBox9->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="E";
 						chr='E';
 				}
 				if (ch=='W')
 				{
 						pictureBox10->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="W";
 						chr='W';
 				}
 				if (ch=='Q')
 				{
 						pictureBox11->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="Q";
 						chr='Q';
 				}
 				if (ch=='A')
 				{
 						pictureBox12->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="A";
 						chr='A';
 				}
 				if (ch=='S')
 				{
 						pictureBox13->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="S";
 						chr='S';
 				}
 				if (ch=='Y')
 				{
 						pictureBox4->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="Y";
 						chr='Y';
 				}
 				if (ch=='U')
 				{
 						pictureBox14->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="U";
 						chr='U';
 				}
 				if (ch=='I')
 				{
 						pictureBox15->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="I";
 						chr='I';
 				}
 				if (ch=='O')
 				{
 						pictureBox16->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="O";
 						chr='O';
 				}
 				if (ch=='P')
 				{
 						pictureBox17->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="P";
 						chr='P';
 				}
 				if (ch=='{')
 				{
 						pictureBox18->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="{";
 						chr='{';
 				}
 				if (ch=='}')
 				{
 						pictureBox19->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="}";
 						chr='}';
 				}
 				if (ch=='D')
 				{
 						pictureBox20->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="D";
 						chr='D';
 				}
 				if (ch=='F')
 				{
 						pictureBox21->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="F";
 						chr='F';
 				}
 				if (ch=='G')
 				{
 						pictureBox22->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="G";
 						chr='G';
 				}
 				if (ch=='H')
 				{
 						pictureBox23->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="H";
 						chr='H';
 				}
 				if (ch=='J')
 				{
 						pictureBox24->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="J";
 						chr='J';
 				}
 				if (ch=='K')
 				{
 						pictureBox25->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="K";
 						chr='K';
 				}
 				if (ch=='L')
 				{
 						pictureBox26->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="L";
 						chr='L';
 				}
 				if (ch==':')
 				{
 						pictureBox27->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1=":";
 						chr=':';
 				}
 				if (ch=='\"')
 				{
 						pictureBox28->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="\"";
 						chr='\"';
 				}
 				if (ch=='Z')
 				{
 						pictureBox29->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="Z";
 						chr='Z';
 				}
 				if (ch=='X')
 				{
 						pictureBox30->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="X";
 						chr='X';
 				}
 				if (ch=='C')
 				{
 						pictureBox31->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="C";
 						chr='C';
 				}
 				if (ch=='V')
 				{
 						pictureBox32->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="V";
 						chr='V';
 				}
 				if (ch=='B')
 				{
 						pictureBox33->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="B";
 						chr='B';
 				}
 				if (ch=='N')
 				{
 						pictureBox34->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="N";
 						chr='N';
 				}
 				if (ch=='M')
 				{
 						pictureBox35->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="M";
 						chr='M';
 				}
 				if (ch=='<')
 				{
 						pictureBox36->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="<";
 						chr='<';
 				}
 				if (ch=='>')
 				{
 						pictureBox37->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1=">";
 						chr='>';
 				}
 				if (ch=='?')
 				{
 						pictureBox38->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::Fixed3D;
 						str1="?";
 						chr='?';
 				}
@@ -425,138 +458,172 @@ namespace SpeedTest{
 				if ((ch=='r') || (ch=='R'))
 				{
 						pictureBox1->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='t') || (ch=='T'))
 				{
 						pictureBox2->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if (ch==' ')
 				{
 						pictureBox3->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='e') || (ch=='E'))
 				{
 						pictureBox9->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='w') || (ch=='W'))
 				{
 						pictureBox10->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='q') || (ch=='Q'))
 				{
 						pictureBox11->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='a') || (ch=='A'))
 				{
 						pictureBox12->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='s') || (ch=='S'))
 				{
 						pictureBox13->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='y') || (ch=='Y'))
 				{
 						pictureBox4->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='u') || (ch=='U'))
 				{
 						pictureBox14->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='i') || (ch=='I'))
 				{
 						pictureBox15->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='o') || (ch=='O'))
 				{
 						pictureBox16->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='p') || (ch=='P'))
 				{
 						pictureBox17->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='[') || (ch=='{'))
 				{
 						pictureBox18->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch==']') || (ch=='}'))
 				{
 						pictureBox19->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='d') || (ch=='D'))
 				{
 						pictureBox20->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='f') || (ch=='F'))
 				{
 						pictureBox21->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='g') || (ch=='G'))
 				{
 						pictureBox22->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='h') || (ch=='H'))
 				{
 						pictureBox23->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='j') || (ch=='J'))
 				{
 						pictureBox24->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='k') || (ch=='K'))
 				{
 						pictureBox25->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='l') || (ch=='L'))
 				{
 						pictureBox26->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch==';') || (ch==':'))
 				{
 						pictureBox27->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='\'') || (ch=='\"'))
 				{
 						pictureBox28->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='z') || (ch=='Z'))
 				{
 						pictureBox29->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='x') || (ch=='X'))
 				{
 						pictureBox30->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='c') || (ch=='C'))
 				{
 						pictureBox31->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='v') || (ch=='V'))
 				{
 						pictureBox32->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='b') || (ch=='B'))
 				{
 						pictureBox33->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='n') || (ch=='N'))
 				{
 						pictureBox34->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='m') || (ch=='M'))
 				{
 						pictureBox35->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch==',') || (ch=='<'))
 				{
 						pictureBox36->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='.') || (ch=='>'))
 				{
 						pictureBox37->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if ((ch=='/') || (ch=='?'))
 				{
 						pictureBox38->BorderStyle=System::Windows::Forms::BorderStyle::None;
+						pictureBox40->BorderStyle=System::Windows::Forms::BorderStyle::None;
 				}
 				if (textBox1->Text!="")
 				nextkey();
@@ -704,13 +771,13 @@ namespace SpeedTest{
 			 {
 				 //MessageBox::Show("Entering error has occured(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				 fails++;
-				 label2->Text="Masiatkes "+fails+"/3";
-				 backerror = 1;
+				 label2->Text="Mistakes "+fails+"/10";
+				 backerror = 5;
 				 error = 0;
 				 timer3->Start();
 				 delete pictureBox39->Image;
 				 pictureBox39->Image = nullptr;
-				 if (fails==3) 
+				 if (fails==10) 
 				 {
 					 StreamWriter^ sw = gcnew StreamWriter("Result.txt",true);
 					 sw->WriteLine(textBox2->Text);
@@ -724,7 +791,8 @@ namespace SpeedTest{
 					 res->textBox1->Text = this->textBox2->Text;
 					 res->textBox2->Text = this->textBox4->Text;
 					 res->textBox3->Text = this->textBox5->Text;
-					 res->label7->Text = "FAILS";
+					 res->pictureBox1->Load("resimg\\ThumbR.png");
+					 res->pictureBox3->Load("resimg\\Fail.png");
 					 this->Hide();
 				 }
 			 }
@@ -737,7 +805,7 @@ namespace SpeedTest{
 				 sw->WriteLine(textBox2->Text);
 				 sw->WriteLine(textBox4->Text);
 				 sw->WriteLine(textBox5->Text);
-				 sw->WriteLine(((double)time/CLOCKS_PER_SEC)+" sec.");
+				 sw->WriteLine((((double)time/CLOCKS_PER_SEC)+fails) +" sec.");
 				 sw->WriteLine(sr_znach/((float)time/CLOCKS_PER_SEC));
 				 sw->Close();
 				 Result ^ res = gcnew Result();
@@ -745,8 +813,10 @@ namespace SpeedTest{
 				 res->textBox1->Text = this->textBox2->Text;
 				 res->textBox2->Text = this->textBox4->Text;
 				 res->textBox3->Text = this->textBox5->Text;
-				 res->label5->Text = "Lead time taken "+((double)time/CLOCKS_PER_SEC)+ " sec.";
-				 res->label6->Text = "The average number of clicks per second = "+ sr_znach/((float)time/CLOCKS_PER_SEC);
+				 res->label5->Text = "Lead time taken "+((double)time/CLOCKS_PER_SEC)+ " + " + fails + " sec.";
+				 res->label6->Text = "Clicks per second = "+ sr_znach/((float)time/CLOCKS_PER_SEC);
+				 res->pictureBox1->Load("resimg\\ThumbG.png");
+				 res->pictureBox2->Load("resimg\\sucessG.png");
 				 this->Hide();
 				 //MessageBox::Show("Тест окончен, время выполнения заняло "+ ((double)time/CLOCKS_PER_SEC)+ " сек.","Cреднее количество нажатий в секунду = "+ sr_znach/((double)time/CLOCKS_PER_SEC), MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				 }
@@ -763,7 +833,7 @@ namespace SpeedTest{
 		 }
 	System::Void Form1::timer1_Tick_1(System::Object^  sender, System::EventArgs^  e)
 		 {
-			 label1->Text = "Нажатий в секунду: " + o;
+			 label1->Text = "Clicks per second: " + o;
 			 o = 0;
 			 timer1->Stop();
 			 timer1->Start();
@@ -782,14 +852,15 @@ namespace SpeedTest{
 			if (error > 0)
 			{
 				pictureBox39->Load("errorimg\\RED"+error+".png");
-				error--;
+				error-=5;
+				timer3->Start();
 			}
-			if (backerror<=5) 
+			if (backerror<=100) 
 			{ 
 				pictureBox39->Load("errorimg\\RED"+backerror+".png");
-				backerror++;
-				if (backerror==5) error = 5;
+				backerror+=5;
+				if (backerror==100) error = 100;
+				timer3->Start();
 			}
-			timer3->Start();
 		}
 }

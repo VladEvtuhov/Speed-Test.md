@@ -78,7 +78,7 @@ namespace SpeedTest{
 			 table->Columns->Add("Name");
 			 table->Columns->Add("Level");
 			 table->Columns->Add("Lead time taken");
-			 table->Columns->Add("The average number of clicks per second");
+			 table->Columns->Add("Clicks per second");
 			 st->Show();
 			 while (sr->Peek()> -1)
 			 {

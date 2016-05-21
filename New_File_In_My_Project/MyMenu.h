@@ -71,6 +71,7 @@ namespace SpeedTest {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyMenu::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -156,7 +157,7 @@ namespace SpeedTest {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(256, 131);
+			this->button4->Location = System::Drawing::Point(247, 131);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(55, 23);
 			this->button4->TabIndex = 12;
@@ -183,6 +184,8 @@ namespace SpeedTest {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(314, 162);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);

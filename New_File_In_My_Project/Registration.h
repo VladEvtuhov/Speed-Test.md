@@ -77,6 +77,7 @@ namespace SpeedTest {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Registration::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -92,7 +93,7 @@ namespace SpeedTest {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(141, 47);
+			this->textBox1->Location = System::Drawing::Point(158, 51);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(135, 20);
 			this->textBox1->TabIndex = 0;
@@ -101,7 +102,7 @@ namespace SpeedTest {
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
-			this->textBox2->Location = System::Drawing::Point(141, 88);
+			this->textBox2->Location = System::Drawing::Point(158, 92);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(135, 20);
 			this->textBox2->TabIndex = 1;
@@ -110,30 +111,33 @@ namespace SpeedTest {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Enabled = false;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 14.25F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 12.75F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(74, 86);
+			this->label1->Location = System::Drawing::Point(97, 91);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(61, 22);
+			this->label1->Size = System::Drawing::Size(55, 19);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Name:";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 14.25F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point, 
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Baskerville Old Face", 12.75F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(16, 44);
+			this->label2->ForeColor = System::Drawing::Color::Black;
+			this->label2->Location = System::Drawing::Point(46, 50);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(119, 22);
+			this->label2->Size = System::Drawing::Size(106, 19);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Second name:";
 			// 
 			// button1
 			// 
 			this->button1->Enabled = false;
-			this->button1->Location = System::Drawing::Point(122, 126);
+			this->button1->Location = System::Drawing::Point(139, 130);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 3;
@@ -166,14 +170,14 @@ namespace SpeedTest {
 			// statisticsToolStripMenuItem
 			// 
 			this->statisticsToolStripMenuItem->Name = L"statisticsToolStripMenuItem";
-			this->statisticsToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->statisticsToolStripMenuItem->Size = System::Drawing::Size(120, 22);
 			this->statisticsToolStripMenuItem->Text = L"Statistics";
 			this->statisticsToolStripMenuItem->Click += gcnew System::EventHandler(this, &Registration::statisticsToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(120, 22);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &Registration::exitToolStripMenuItem_Click);
 			// 
@@ -181,6 +185,8 @@ namespace SpeedTest {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(314, 197);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label2);
