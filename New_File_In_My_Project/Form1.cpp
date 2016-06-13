@@ -450,7 +450,7 @@ namespace SpeedTest{
 				}
 				else 
 				{
-					MessageBox::Show("Произошла ошибка при вводе(Возможно Вкл/Выкл CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+					MessageBox::Show("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ(пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				}
 			}
 	void Form1::Keyq(wchar_t ch)
@@ -769,7 +769,7 @@ namespace SpeedTest{
 			 }
 			 if ((textBox1->Text!="") && (textBox1->Text!=str1))
 			 {
-				 //MessageBox::Show("Entering error has occured(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 //MessageBox::Show("Entering error has occurred(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				 fails++;
 				 label2->Text="Mistakes "+fails+"/10";
 				 backerror = 5;
@@ -818,7 +818,7 @@ namespace SpeedTest{
 				 res->pictureBox1->Load("resimg\\ThumbG.png");
 				 res->pictureBox2->Load("resimg\\sucessG.png");
 				 this->Hide();
-				 //MessageBox::Show("Тест окончен, время выполнения заняло "+ ((double)time/CLOCKS_PER_SEC)+ " сек.","Cреднее количество нажатий в секунду = "+ sr_znach/((double)time/CLOCKS_PER_SEC), MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 //MessageBox::Show("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "+ ((double)time/CLOCKS_PER_SEC)+ " пїЅпїЅпїЅ.","CпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ = "+ sr_znach/((double)time/CLOCKS_PER_SEC), MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				 }
 			 }
 			 textBox1->Text="";

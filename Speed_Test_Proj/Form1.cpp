@@ -418,7 +418,7 @@ namespace SpeedTest{
 				}
 				else 
 				{
-					MessageBox::Show("Произошла ошибка при вводе(Возможно Вкл/Выкл CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+					MessageBox::Show("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ(пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				}
 			}
 	void Form1::Keyq(wchar_t ch)
@@ -655,7 +655,7 @@ namespace SpeedTest{
 			 }
 			 if ((textBox1->Text!="") && (textBox1->Text!=str1))
 			 {
-				 MessageBox::Show("Entering error has occured(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 MessageBox::Show("Entering error has occurred(Advice: on\\off CapsLock)","", MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				 fails++;
 				 if (fails==3) 
 				 {
@@ -695,7 +695,7 @@ namespace SpeedTest{
 				 res->label5->Text = "Lead time taken "+((double)time/CLOCKS_PER_SEC)+ " sec.";
 				 res->label6->Text = "The average number of clicks per second = "+ sr_znach/((float)time/CLOCKS_PER_SEC);
 				 this->Hide();
-				 //MessageBox::Show("Тест окончен, время выполнения заняло "+ ((double)time/CLOCKS_PER_SEC)+ " сек.","Cреднее количество нажатий в секунду = "+ sr_znach/((double)time/CLOCKS_PER_SEC), MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
+				 //MessageBox::Show("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "+ ((double)time/CLOCKS_PER_SEC)+ " пїЅпїЅпїЅ.","CпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ = "+ sr_znach/((double)time/CLOCKS_PER_SEC), MessageBoxButtons::OK,MessageBoxIcon::Asterisk);
 				 }
 			 }
 			 textBox1->Text="";
@@ -710,7 +710,7 @@ namespace SpeedTest{
 		 }
 	System::Void Form1::timer1_Tick_1(System::Object^  sender, System::EventArgs^  e)
 		 {
-			 label1->Text = "Нажатий в секунду: " + o;
+			 label1->Text = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + o;
 			 o = 0;
 			 timer1->Stop();
 			 timer1->Start();
